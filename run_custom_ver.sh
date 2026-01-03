@@ -69,6 +69,7 @@ then
     --hhr $WDIR/t000_.hhr \
     --atab $WDIR/t000_.atab \
     --db $DB 1> $WDIR/log/network.stdout 2> $WDIR/log/network.stderr
+    --custom-t2d /path/to/t2d.npy
 fi
 
 echo "Done"
