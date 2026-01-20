@@ -1,6 +1,5 @@
-# *RoseTTAFold* 
-This package contains deep learning models and related scripts to run RoseTTAFold.  
-This repository is the official implementation of RoseTTAFold: Accurate prediction of protein structures and interactions using a 3-track network.
+# *RoseTTAFold-VAE* 
+This repository has been forked from the official RoseTTAFold repository to incorporate pairwise template(4 channels) to 3D structure generation. The template carries pairwise features which can be trained by a lightweight generative AI model like a VAE(VAE_RF_Templ_Gen). Combining them with the RoseTTAFold pre-trained weights and architecture can lead to genrating novel conformations, aiding MD simulations and protein structural analysis. 
 
 ## Installation
 
