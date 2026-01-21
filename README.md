@@ -1,6 +1,8 @@
 # *RoseTTAFold-VAE* 
 This repository has been forked from the official RoseTTAFold repository to incorporate pairwise template(4 channels) to 3D structure generation. The template carries pairwise features which can be trained by a lightweight generative AI model like a VAE(VAE_RF_Templ_Gen). Combining them with the RoseTTAFold pre-trained weights and architecture can lead to genrating novel conformations, aiding MD simulations and protein structural analysis. 
-
+## Codebase and Changes to `predict_e2e.py`
+The following is the network of the codebase of the original RF implementation:
+![RF_Network](Images/RF_Network.png)
 ## Installation
 
 1. Clone the package
