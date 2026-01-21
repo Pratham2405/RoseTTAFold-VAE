@@ -65,6 +65,9 @@ tar xfz pdb100_2021Mar03.tar.gz
 cd example
 ../run_[pyrosetta, e2e]_ver.sh input.fa .
 
+# For monomer prediction from templates generated from VAE_RF_Templ_Gen:
+../run_custom.sh protein_sequences.fa structure_c6d.pt
+
 # For complex modeling
 # please see README file under example/complex_modeling/README for details.
 python network/predict_complex.py -i paired.a3m -o complex -Ls 218 310 
