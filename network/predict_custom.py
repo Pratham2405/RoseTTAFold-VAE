@@ -339,9 +339,10 @@ class Predictor():
                 prob = prob / torch.sum(prob, dim=0)[None]
                 prob_trF.append(prob)
 
-            xyz = xyz[0, :, 1]
+            xyz = xyz[0, :, :, 1]
             TRF = TRFold(prob_trF, fold_params)
-            xyz = TRF.fold(xyz, batch=15, lr=0.1, nsteps=200)
+            with torch.set_grad_enabled(True):
+                xyz = TRF.fold(xyz, batch=15, lr=0.1, nsteps=200)
             xyz = xyz.detach().cpu().numpy()
 
             # Add O and Cb
