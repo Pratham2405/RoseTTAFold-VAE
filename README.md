@@ -81,6 +81,8 @@ e.g. python network_2track/predict_msa.py -msa input.a3m -npz complex.npz -L1 21
 For the pyrosetta version, user will get five final models having estimated CA rms error at the B-factor column (model/model_[1-5].crderr.pdb).  
 For the end-to-end version, there will be a single PDB output having estimated residue-wise CA-lddt at the B-factor column (t000_.e2e.pdb).
 
+![Final Comparison](network/Images/Final_RMSD.png "Final RMSD Comparison between Sample c6d and original PDB")
+
 ## FAQ
 1. Segmentation fault while running hhblits/hhsearch  
 For easy install, we used a statically compiled version of hhsuite (installed through conda). Currently, we're not sure what exactly causes segmentation fault error in some cases, but we found that it might be resolved if you compile hhsuite from source and use this compiled version instead of conda version. For installation of hhsuite, please see [here](https://github.com/soedinglab/hh-suite).
