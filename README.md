@@ -5,7 +5,8 @@ The following is the network of the codebase of the original RF implementation:
 
 ![RF_Network](network/Images/RF_Network.png)
 
-The installation steps remain the same. All the changes have been incorporated in `predict_custom.py`. The example fasta file `input_1.fa` has been added along with single_sample.npy for the user to test compilation.
+The installation steps remain the same. All the changes have been incorporated in `predict_custom.py`. The example fasta file `input_1.fa` has been added along with `single_sample.npy` for the user to test compilation.
+
 ## Installation
 
 1. Clone the package
