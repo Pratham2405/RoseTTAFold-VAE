@@ -432,35 +432,3 @@ if __name__ == "__main__":
                     t0d_confidence=args.confidence)
     else:
         print(f"Output {args.out_prefix}.npz already exists, skipping prediction")
-
-
-# USAGE EXAMPLES:
-# ---------------
-# 
-# 1. With c6d templates and minimal MSA (template-focused prediction):
-#    python predict_e2e_modified.py -i minimal_query.a3m -o output --c6d my_c6d.npy --confidence 0.7
-#
-# 2. With c6d templates and high confidence:
-#    python predict_e2e_modified.py -i minimal_query.a3m -o output --c6d my_c6d.npy --confidence 0.8
-#
-# 3. Without templates (MSA-only prediction):
-#    python predict_e2e_modified.py -i full_msa.a3m -o output
-#
-# NOTES:
-# ------
-# - For template-only reconstruction, create a minimal a3m file with just the query sequence
-# - c6d file should be a numpy array with shape (n_templates, L, L, 4)
-# - The c6d_to_t2d function needs to be implemented based on your specific c6d format
-# - Default confidence of 0.7 provides strong template guidance while allowing MSA input
-# - Sequence length L in c6d must match the sequence length in the a3m file
-
-# Usage Example
-# python predict_custom.py \
-#     -i minimal_query.a3m \
-#     -o reconstruction_test \
-#     --c6d my_pdb_derived_c6d.npy \
-#     --confidence 0.7
-
-
-
-
