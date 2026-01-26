@@ -66,7 +66,7 @@ cd example
 ../run_[pyrosetta, e2e]_ver.sh input.fa .
 
 # For monomer prediction from templates generated from VAE_RF_Templ_Gen:
-../run_custom.sh input_1.fa single_sample.npy ./working_dir 0.7 
+../run_e2e_custom.sh input_1.fa single_sample.npy ./working_dir 0.7 
 
 # For complex modeling
 # please see README file under example/complex_modeling/README for details.
