@@ -5,6 +5,8 @@ The following is the network of the codebase of the original RF implementation:
 
 ![RF_Network](network/Images/RF_Network.png)
 
+The major necessary change was skipping the `parsers.py` file which handles the template preparation(t0d, t1d, t2d), which is used by `trFold.py` later on for 3D structure prediction. Instead, the template features have been prepared by `c6d_to_t2d()` function of `kinematics.py`, taking the c6d from the input and using the templates(t0d, t1d, t2d) thus generated instead of `parsers.py`.
+
 The installation steps remain the same. All the changes have been incorporated in `predict_custom.py`. The example fasta file `input_1.fa` has been added along with `single_sample.npy` for the user to test compilation.
 
 ## Installation
